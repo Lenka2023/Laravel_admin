@@ -2,18 +2,13 @@
 
 @section('content')
    <p>
-   {!!$title!!}
+   {!!$name!!}
    </p>
     <p>
-   {!!$slug!!}
+   {!!$path!!}
    </p>
     <p>
-   {!!$url!!}
+   {!!$content!!}
    </p>
-    <p>
-   {!!$text!!}
-   </p>
-    <p>
-   {!!$body!!}
-   </p>
+   
 @endsection

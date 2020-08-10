@@ -11,15 +11,17 @@
 |
 */
 
-Route::prefix('pagesmodule')->group(function() {
-   // Route::get('/', 'PagesModuleController@index');
-});
- Route::get('/', 'PagesModuleController@index');
-Route::get('/create',"PagesModuleController@create");
-Route::get('/show', "PagesModuleController@show");
+//Route::prefix('pagesmodule')->group(function() {
+    //Route::get('/', 'PagesModuleController@index');
+//});
+ //Route::get('/', 'PagesModuleController@index');
+//Route::get('/create',"PagesModuleController@create");
+//Route::get('/show', "PagesModuleController@show");
 //Route::get('posts/category',"CategoryController@index");
 //Route::post('/store', "PagesModuleController@store");
 
 //Route::get('/edit', "PagesModuleController@edit");
 
-Route::patch('/update', "PagesModuleController@update");
+//Route::patch('/update', "PagesModuleController@update");
+Route::get('{path}', 'PagesController@dynamic')->where('path', '[0-9A-Za-z\/-]+'); 
+app(Modules\PagesModule\Editing\PageRoutes::class)->routes();

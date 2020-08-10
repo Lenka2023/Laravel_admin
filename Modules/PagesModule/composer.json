@@ -16,8 +16,13 @@
         }
     },
     "autoload": {
+         "classmap": [
+        "Modules/PagesModule/Editing"
+
+    ],
         "psr-4": {
             "Modules\\PagesModule\\": ""
         }
+
     }
 }

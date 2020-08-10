@@ -1,9 +1,9 @@
 @extends('pagesmodule::layouts.master')
 
 @section('content')
-  <h2>Edit a post:</h2>
+  <h2>Create:</h2>
 
-   <form action="/create" method="post"enctype="multipart/form-data">
+   <form action="{path}" method="post"enctype="multipart/form-data">
 
         {{csrf_field()}}
         {!! method_field('patch') !!}
@@ -12,23 +12,20 @@
 
         
         <div class="form-group">
-            <label for="title">input Title:</label>
-            <input class="form-control" type="text" name="title"  id="title">
+            <label for="name">input Name:</label>
+            <input class="form-control" type="text" name="name"  id="name">
         </div>
 
         <div class="form-group">
-            <label for="alias">input Slug:</label>
-            <input class="form-control" type="text" name="slug"  id="slug">
+            <label for="path">input Path:</label>
+            <input class="form-control" type="text" name="path"  id="path">
         </div>
 
-        <div class="form-group">
-            <label for="intro">input URL:</label>
-            <textarea class="form-control" type="text" name="url"  id="url"></textarea>
-        </div>
+       
 
         <div class="form-group">
-            <label for="body">input Text:</label>
-            <textarea class="form-control" type="text" name="text" id="text"></textarea>
+            <label for="content">input Content:</label>
+            <textarea class="form-control" type="text" name="content" id="content"></textarea>
         </div>
         
 
