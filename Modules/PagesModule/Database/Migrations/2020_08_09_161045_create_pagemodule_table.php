@@ -17,9 +17,9 @@ class CreatePagemoduleTable extends Migration
              $table->increments('id');
              $table->string('title', 50);
              $table->string('slug', 50)->unique();
-             $table->string('uri')->nullable();
+             $table->string('url')->nullable();
              $table->string('text');
-            $table->string('avatar')->nullable();
+            //$table->string('avatar')->nullable();
             $table->timestamps();
         });
     }

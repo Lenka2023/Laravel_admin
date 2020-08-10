@@ -2,18 +2,18 @@
 
 @section('content')
    <p>
-   {!!$post->title!!}
+   {!!$title!!}
    </p>
     <p>
-   {!!$post->slug!!}
+   {!!$slug!!}
    </p>
     <p>
-   {!!$post->url!!}
+   {!!$url!!}
    </p>
     <p>
-   {!!$post->text!!}
+   {!!$text!!}
    </p>
     <p>
-   {!!$post->body!!}
+   {!!$body!!}
    </p>
 @endsection

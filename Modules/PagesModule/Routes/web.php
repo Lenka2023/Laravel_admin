@@ -18,8 +18,8 @@ Route::prefix('pagesmodule')->group(function() {
 Route::get('/create',"PagesModuleController@create");
 Route::get('/show', "PagesModuleController@show");
 //Route::get('posts/category',"CategoryController@index");
-Route::post('/store', "PagesModuleController@store");
+//Route::post('/store', "PagesModuleController@store");
 
-Route::get('/edit', "PagesModuleController@edit");
+//Route::get('/edit', "PagesModuleController@edit");
 
 Route::patch('/update', "PagesModuleController@update");

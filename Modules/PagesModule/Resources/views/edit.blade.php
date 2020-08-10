@@ -3,7 +3,7 @@
 @section('content')
    <h2>Edit a post:</h2>
 
-    <form action="/posts/{{$post->id}}" method="post"enctype="multipart/form-data">
+    <form action="/edit" method="post"enctype="multipart/form-data">
 
         {{csrf_field()}}
         {!! method_field('patch') !!}
@@ -27,10 +27,7 @@
             <textarea class="form-control" type="text" name="text" id="text">{{$post->text}}</textarea>
         </div>
         
-        <div class="form-group">
-            <label for="file">Image:</label>
-            <input class="btn btn-primary"  type="file" name="image" > <br/>
-        </div>
+        
         
 
         <div class="form-group">

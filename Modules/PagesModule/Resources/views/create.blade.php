@@ -3,14 +3,14 @@
 @section('content')
   <h2>Edit a post:</h2>
 
-    <form action="/posts/{{$post->id}}" method="post"enctype="multipart/form-data">
+   <form action="/create" method="post"enctype="multipart/form-data">
 
         {{csrf_field()}}
         {!! method_field('patch') !!}
 
-    <form action="/create" method="post" >
+   
 
-        {{csrf_field()}}
+        
         <div class="form-group">
             <label for="title">input Title:</label>
             <input class="form-control" type="text" name="title"  id="title">
@@ -30,15 +30,7 @@
             <label for="body">input Text:</label>
             <textarea class="form-control" type="text" name="text" id="text"></textarea>
         </div>
-        <div class="form-group">
-           <div class="form-group">
-            <label for="file">Input Image:</label>
-            <input class="btn btn-primary"  type="file" name="image" > <br/>
-        </div>
-         <div class="form-group">
-             
-            </select>
-        </div>
+        
 
         <div class="form-group">
             <button class="btn btn-primary" type="submit">Create</button>

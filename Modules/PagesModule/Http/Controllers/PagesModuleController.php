@@ -33,18 +33,21 @@ class PagesModuleController extends Controller
      */
     public function store(Request $request)
     {
-       
+      $title='';
+      $slug='';
+      $url='';
+      $text='';
      $result=false;
-        if($request->has('title') & $request->has('slug') & $request->has('url') & $request->has('text')){
+        $title=$request->input('title');
+        $slug=$request->input('slug');
+        $url=$request->input('url');
+        $text=$request->input('text');
 
-        $result=DB::insert("INSERT INTO pagemodule (title, slug, url, text ) VALUES (:title, :slug, :url, :text)",
-            [   'title'=>$request->input('title'),
-                'slug'=>$request->input('slug'),
-                'url'=>$request->input('url'),
-                'text'=>$request->input('text')]);
 
+        $result=DB::insert("INSERT INTO pagemodule (title, slug, url, text ) VALUES ($title, $slug, $url, $text)");
+           
     }
-}
+
 
     /**
      * Show the specified resource.
