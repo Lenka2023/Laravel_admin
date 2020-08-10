@@ -1,0 +1,13 @@
+{
+    "name": "PagesModule",
+    "alias": "pagesmodule",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\PagesModule\\Providers\\PagesModuleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
